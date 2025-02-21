@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
+    
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600 dark:text-white">DB Admin Dashboard</h1>
+        <div>
+            <a href="/logout" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-center py-12 bg-gradient-to-r from-blue-500 to-green-500 text-white">
+        <h2 class="text-4xl font-extrabold">Patient Database Overview</h2>
+        <p class="mt-2 text-lg">Manage and track patient visits, assigned doctors, and reports.</p>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="max-w-4xl mx-auto mt-6 p-4">
+        <input type="text" id="search" placeholder="Search patients..." class="w-full p-3 rounded-lg border dark:border-gray-700 dark:bg-gray-800 dark:text-white">
+    </div>
+
+    <!-- Patient Table -->
+    <div class="max-w-6xl mx-auto mt-6 p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
+        <h3 class="text-2xl font-bold text-gray-700 dark:text-white">Patient Records</h3>
+        <div class="overflow-x-auto mt-4">
+            <table class="w-full border-collapse border border-gray-300 dark:border-gray-700">
+                <thead>
+                    <tr class="bg-gray-200 dark:bg-gray-700">
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Patient Name</th>
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Last Visit</th>
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Doctor Assigned</th>
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Reports Submitted</th>
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="patientTableBody">
+                    <!-- Patient data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-16 text-center text-gray-600 dark:text-gray-400 py-8">
+        <p>&copy; 2025 EHR System. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for dynamic data -->
+    <script>
+        const patients = [
+            { name: "John Doe", visit: "Feb 15, 2025", doctor: "Dr. Smith", reports: "Yes", status: "Completed" },
+            { name: "Jane Smith", visit: "Feb 18, 2025", doctor: "Dr. Taylor", reports: "No", status: "Pending" },
+            { name: "Michael Brown", visit: "Feb 20, 2025", doctor: "Dr. Johnson", reports: "Yes", status: "Completed" },
+            { name: "Emily Davis", visit: "Feb 25, 2025", doctor: "Dr. Wilson", reports: "No", status: "Pending" }
+        ];
+
+        const tableBody = document.getElementById("patientTableBody");
+
+        function loadPatients() {
+            tableBody.innerHTML = patients.map(p => `
+                <tr class="text-center">
+                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${p.name}</td>
+                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${p.visit}</td>
+                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${p.doctor}</td>
+                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${p.reports}</td>
+                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${p.status}</td>
+                </tr>
+            `).join("");
+        }
+
+        // Load initial patient data
+        loadPatients();
+
+        // Search functionality
+        document.getElementById("search").addEventListener("input", function() {
+            const searchTerm = this.value.toLowerCase();
+            tableBody.innerHTML = patients
+                .filter(p => p.name.toLowerCase().includes(searchTerm))
+                .map(p => `
+                    <tr class="text-center">
+                        <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${p.name}</td>
+                        <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${p.visit}</td>
+                        <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${p.doctor}</td>
+                        <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${p.reports}</td>
+                        <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">${p.status}</td>
+                    </tr>
+                `).join("");
+        });
+    </script>
+
+</body>
+</html>

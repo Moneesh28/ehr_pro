@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EHR System - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition-all">
+    
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between items-center fixed w-full top-0 z-50">
+        <h1 class="text-3xl font-extrabold text-blue-600 dark:text-white">EHR System</h1>
+        <div>
+            <a href="/login" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">Login</a>
+            <a href="/upload" class="ml-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">Upload Report</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="text-center py-24 bg-gradient-to-r from-blue-500 to-green-500 text-white mt-16">
+        <h2 class="text-5xl font-extrabold animate-fadeIn">Simplify Your Health Records</h2>
+        <p class="mt-4 text-lg max-w-2xl mx-auto">Upload, analyze, and visualize your blood reports effortlessly with our AI-powered health record system.</p>
+        <a href="/dashboard" class="mt-6 inline-block px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg hover:bg-gray-200 transition">Go to Dashboard</a>
+
+    </header>
+    
+    <!-- Features Section -->
+    <section class="max-w-6xl mx-auto mt-16 grid md:grid-cols-3 gap-8 text-center px-6">
+        <div class="p-8 bg-white dark:bg-gray-800 shadow-lg rounded-lg hover:shadow-xl transition-transform transform hover:scale-105">
+            <h3 class="text-2xl font-bold">🔒 Secure Storage</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">Your reports are stored securely with encryption and privacy protection.</p>
+        </div>
+        <div class="p-8 bg-white dark:bg-gray-800 shadow-lg rounded-lg hover:shadow-xl transition-transform transform hover:scale-105">
+            <h3 class="text-2xl font-bold">🤖 AI Summarization</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">Get automated insights from your medical reports with AI-powered analysis.</p>
+        </div>
+        <div class="p-8 bg-white dark:bg-gray-800 shadow-lg rounded-lg hover:shadow-xl transition-transform transform hover:scale-105">
+            <h3 class="text-2xl font-bold">📊 Data Visualization</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">Track your health trends with interactive and easy-to-read charts.</p>
+        </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section class="max-w-6xl mx-auto mt-20 text-center px-6">
+        <h2 class="text-4xl font-extrabold text-blue-600 dark:text-white">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-10">
+            <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">1️⃣ Upload</h3>
+                <p class="mt-2 text-gray-600 dark:text-gray-400">Simply upload your blood test reports in PDF format.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">2️⃣ AI Analysis</h3>
+                <p class="mt-2 text-gray-600 dark:text-gray-400">Our AI extracts important health metrics and summarizes them for you.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">3️⃣ Insights & Trends</h3>
+                <p class="mt-2 text-gray-600 dark:text-gray-400">View historical trends and health recommendations.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="text-center py-16 bg-blue-600 text-white mt-16">
+        <h2 class="text-4xl font-extrabold">Ready to Get Started?</h2>
+        <p class="mt-4 text-lg">Sign up today and take control of your health data.</p>
+        <a href="/register" class="mt-6 inline-block px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg hover:bg-gray-200 transition">Create an Account</a>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="mt-16 text-center text-gray-600 dark:text-gray-400 py-8">
+        <p>&copy; 2025 EHR System. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service | Contact Us</p>
+    </footer>
+    
+</body>
+</html>

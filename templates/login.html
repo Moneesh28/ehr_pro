@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EHR System - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
+    
+    <nav class="bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between items-center fixed w-full top-0 z-50">
+        <h1 class="text-3xl font-extrabold text-blue-600 dark:text-white">EHR System</h1>
+        <div>
+            <a href="/" class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition">Home</a>
+            <a href="/signup" class="ml-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">Sign Up</a>
+        </div>
+    </nav>
+    
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 w-full max-w-md">
+            <h2 class="text-3xl font-bold text-center text-blue-600 dark:text-white">Login to EHR System</h2>
+            <p class="text-center text-gray-600 dark:text-gray-400 mt-2">Securely access your health records</p>
+            
+            <form action="/login" method="post" class="mt-6 space-y-4">
+                <div>
+                    <label for="username" class="block text-gray-700 dark:text-gray-300 font-semibold">Username</label>
+                    <input type="text" id="username" name="username" class="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+                </div>
+                
+                <div>
+                    <label for="password" class="block text-gray-700 dark:text-gray-300 font-semibold">Password</label>
+                    <input type="password" id="password" name="password" class="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+                </div>
+                
+                <div class="flex justify-between items-center">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="mr-2"> Remember me
+                    </label>
+                    <a href="/forgot-password" class="text-blue-500 hover:underline">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">Login</button>
+            </form>
+            
+            <p class="text-center text-gray-600 dark:text-gray-400 mt-4">Don't have an account? <a href="/signup" class="text-green-500 hover:underline">Sign up</a></p>
+        </div>
+    </div>
+    
+    <footer class="mt-16 text-center text-gray-600 dark:text-gray-400 py-8">
+        <p>&copy; 2025 EHR System. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service | Contact Us</p>
+    </footer>
+    
+</body>
+</html>

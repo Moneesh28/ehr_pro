@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Staff Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
+    
+    <nav class="bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Hospital Staff Dashboard</h1>
+        <div>
+            <a href="/logout" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Logout</a>
+        </div>
+    </nav>
+    
+    <header class="text-center py-16 bg-gradient-to-r from-blue-500 to-green-500 text-white">
+        <h2 class="text-4xl font-extrabold">Manage Patient Records Efficiently</h2>
+        <p class="mt-4 text-lg">View, update, and organize patient medical records with ease.</p>
+    </header>
+    
+    <main class="max-w-6xl mx-auto mt-10 grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg text-center">
+            <h3 class="text-xl font-bold">View Patient Records</h3>
+            <p class="mt-2">Access and review stored patient records securely.</p>
+            <a href="/patient-records" class="mt-4 inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">View Records</a>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg text-center">
+            <h3 class="text-xl font-bold">Update Patient Information</h3>
+            <p class="mt-2">Modify patient details like contact info and medical history.</p>
+            <a href="/update-info" class="mt-4 inline-block px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">Update Info</a>
+        </div>
+        <div class="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg text-center">
+            <h3 class="text-xl font-bold">Report Tracking</h3>
+            <p class="mt-2">Keep track of pending and completed patient reports.</p>
+            <a href="/track-reports" class="mt-4 inline-block px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition">Track Reports</a>
+        </div>
+    </main>
+    
+    <footer class="mt-16 text-center text-gray-600 dark:text-gray-400 py-8">
+        <p>&copy; 2025 EHR System. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
